@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"AmarokIce"
+	],
+	"copyright": "Copyleft (ɔ) 2024, AmarokIce",
+	"description": "A minimal D application.",
+	"license": "LICENSE",
+	"name": "dutil"
+}

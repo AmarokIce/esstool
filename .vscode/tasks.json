@@ -1,0 +1,19 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "dub build",
+			"type": "dub",
+			"run": false,
+			"compiler": "$current",
+			"archType": "$current",
+			"buildType": "$current",
+			"configuration": "$current",
+			"problemMatcher": [
+				"$dmd"
+			],
+			"group": "build",
+			// "detail": "dub build --compiler=C:\\D\\dmd2\\windows\\bin\\dmd.exe -a=x86_64 -b=debug -c=application"
+		}
+    ]
+}

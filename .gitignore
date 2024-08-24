@@ -1,0 +1,16 @@
+.dub
+docs.json
+__dummy.html
+docs/
+/dutil
+dutil.so
+dutil.dylib
+dutil.dll
+dutil.a
+dutil.lib
+dutil-test-*
+*.exe
+*.pdb
+*.o
+*.obj
+*.lst
