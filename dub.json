@@ -4,6 +4,6 @@
 	],
 	"copyright": "Copyleft (ɔ) 2024, AmarokIce",
 	"description": "A minimal D application.",
-	"license": "LICENSE",
+	"license": "Mozilla Public License Version 2.0",
 	"name": "dutil"
 }

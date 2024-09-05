@@ -1,4 +1,4 @@
-module errors;
+module dutil.errors;
 
 class RuntimeError : Error
 {

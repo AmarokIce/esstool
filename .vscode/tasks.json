@@ -13,7 +13,6 @@
 				"$dmd"
 			],
 			"group": "build",
-			// "detail": "dub build --compiler=C:\\D\\dmd2\\windows\\bin\\dmd.exe -a=x86_64 -b=debug -c=application"
 		}
     ]
 }

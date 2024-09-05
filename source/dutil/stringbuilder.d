@@ -1,6 +1,6 @@
-module stringbuilder;
+module dutil.stringbuilder;
 
-import arrayutil;
+import dutil.arrayutil;
 
 class StringBuilder
 {
