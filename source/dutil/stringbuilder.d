@@ -100,8 +100,8 @@ class StringBuilder
 
 		int endAt = startAt + len(oldStr);
 
-		string head = this.strbuffered[0..startAt-1];
-		string end = this.strbuffered[endAt..$-1];
+		string head = this.strbuffered[0 .. startAt - 1];
+		string end = this.strbuffered[endAt .. $ - 1];
 
 		this.strbuffered = "";
 		this.append(head).append(newStr).append(end);

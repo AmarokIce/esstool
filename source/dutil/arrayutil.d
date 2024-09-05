@@ -2,7 +2,6 @@ module dutil.arrayutil;
 
 import dutil.errors;
 
-
 T[] copy(T)(T[] origin, int start, int end)
 {
 	if (end < start)
@@ -51,5 +50,6 @@ bool contains(T)(T[] array, T obj)
 int len(T)(T[] obj)
 {
 	import std;
+
 	return to!int(obj.length);
 }

@@ -7,5 +7,4 @@ interface List(T)
     public T remove(int index);
     public T pop(T value);
     public int getSize();
-
 }
