@@ -11,7 +11,10 @@ module main;
 public static void main(string[] args)
 {
     // import dutil.arraylist;
-    import std.stdio;
+    import std;
+    import core.stdc.stdlib;
 
     writeln("Hello DUtil!");
+
+    system("java -version");
 }
