@@ -77,3 +77,4 @@ class IllegalInstanceError : IllegalAccessError
         super(msg, file, line);
     }
 }
+
