@@ -49,7 +49,23 @@ bool contains(T)(T[] array, T obj)
 
 int len(T)(T[] obj)
 {
-	import std;
+	import std.conv : to;
 
 	return to!int(obj.length);
+}
+
+int count(T)(T[] obj)
+{
+	import std.typecons;
+	int counter = 0;
+	foreach (T o; obj)
+	{
+		auto j = o.nullable;
+		if (!j.isNull)
+		{
+			counter++;
+		}
+	}
+
+	return counter;
 }

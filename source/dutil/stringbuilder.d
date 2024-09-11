@@ -1,6 +1,7 @@
 module dutil.stringbuilder;
 
 import dutil;
+import std.conv : to;
 
 class StringBuilder
 {
@@ -12,6 +13,16 @@ class StringBuilder
 	this(string def)
 	{
 		this.strbuffered = def;
+	}
+
+	public StringBuilder append(byte b)
+	{
+		return this(to!char(b));
+	}
+
+		public StringBuilder append(ubyte b)
+	{
+		return this(to!char(b));
 	}
 
 	public StringBuilder append(char c)
@@ -32,18 +43,20 @@ class StringBuilder
 		return this;
 	}
 
+		public StringBuilder append(uint i)
+	{
+		this.strbuffered ~= i;
+		return this;
+	}
+
 	public StringBuilder append(float f)
 	{
-		import std;
-
 		this.strbuffered ~= to!string(f);
 		return this;
 	}
 
 	public StringBuilder append(double d)
 	{
-		import std;
-
 		this.strbuffered ~= to!string(d);
 		return this;
 	}

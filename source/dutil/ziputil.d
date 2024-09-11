@@ -2,20 +2,21 @@ module dutil.ziputil;
 
 import std.zip;
 import std.file;
+import std.string;
 
 class ZipCaches
 {
-    ZipArchive archive = ZipArchive();
+    ZipArchive archive = new ZipArchive();
 
-    public void add_file(string filepath, string path = "", CompressionMethod compress = CompressionMethod
+    public void addFile(string filepath, string path = "", CompressionMethod compress = CompressionMethod
             .none)
     {
         if (!exists(filepath) || !isFile(filepath))
         {
-            throw FileException;
+            throw new FileException("The file not exits!");
         }
 
-        ArchiveMember cache = ArchiveMember;
+        ArchiveMember cache = new ArchiveMember();
         cache.compressionMethod = compress;
 
         cache.name = path ~ "/" ~ filepath.split("/")[$];
@@ -24,12 +25,12 @@ class ZipCaches
         archive.addMember(cache);
     }
 
-    public void add_directory(string directory, string basePath = "",
+    public void addDirectory(string directory, string basePath = "",
         CompressionMethod compress = CompressionMethod.none)
     {
-        if (!exists(filepath) || !isDir(filepath))
+        if (!exists(directory) || !isDir(directory))
         {
-            throw FileException;
+            throw new FileException("Dir not exits!");
         }
 
         foreach (DirEntry dir; dirEntries(directory, SpanMode.depth))
@@ -43,9 +44,9 @@ class ZipCaches
         }
     }
 
-    public void create_zip(string zipName)
+    public void createZip(string zipName)
     {
-        void[] compressed_data = zip.build();
+        void[] compressed_data = this.archive.build();
         write(zipName, compressed_data);
     }
 }
