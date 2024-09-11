@@ -104,6 +104,9 @@ class LineReader : IReader
         return builder.asString();
     }
 
+    /**
+     * Buffed a new line.
+     */
     private void itor()
     {
         if (count(this.bufferedArray) > 0)
