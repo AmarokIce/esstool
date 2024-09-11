@@ -1,4 +1,4 @@
-module dutil.buffrerdreader;
+module dutil.reader;
 
 import dutil.arrayutil : count, len;
 
@@ -6,7 +6,7 @@ import dutil.arrayutil : count, len;
 {
     static void main(string[] args)
     {
-        BufferedReader reader = new BufferedReader("./LICENSE");
+        LineReader reader = new LineReader("./LICENSE");
         while (reader.readly())
         {
             writeln(reader.read());
@@ -14,7 +14,7 @@ import dutil.arrayutil : count, len;
     }
 }
 
-class BufferedReader
+class LineReader
 {
     private ubyte[] bufferedArray;
     private ubyte[] buffered;
