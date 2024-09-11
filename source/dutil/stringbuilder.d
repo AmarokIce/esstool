@@ -17,12 +17,12 @@ class StringBuilder
 
 	public StringBuilder append(byte b)
 	{
-		return this(to!char(b));
+		return this.append(to!char(b));
 	}
 
 	public StringBuilder append(ubyte b)
 	{
-		return this(to!char(b));
+		return this.append(to!char(b));
 	}
 
 	public StringBuilder append(char c)

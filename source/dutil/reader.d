@@ -6,17 +6,48 @@ import dutil.arrayutil : count, len;
 {
     static void main(string[] args)
     {
-        LineReader reader = new LineReader("./LICENSE");
+        string[] stringList = new string[0];
+        LineReader reader = new LineReader("./LICENSE"); // The license <Mozilla Public License v2.0>
         while (reader.readly())
         {
-            writeln(reader.read());
+            stringList = stringList ~ [reader.read()];
         }
+
+        assert(stringList == readline("./LICENSE"));
     }
+}
+
+/**
+ * Read all lines in file.
+ * Params:
+ *   file = The file input;
+ * Returns: All texts in file input.
+ */
+string[] readlines(string file)
+{
+    import std.container : Array;
+
+    auto arr = new Array!string();
+
+    LineReader reader = new LineReader(file);
+    while (reader.readly())
+    {
+        arr.insertBack(reader.read());
+    }
+
+    return arr.data();
 }
 
 interface IReader
 {
+    /**
+     * Read raw byte from file.
+     */
     public ubyte[] readRaw();
+
+    /**
+    * Read text from file.
+    */
     public string read();
 }
 
