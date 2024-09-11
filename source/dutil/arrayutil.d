@@ -57,6 +57,7 @@ int len(T)(T[] obj)
 int count(T)(T[] obj)
 {
 	import std.typecons;
+
 	int counter = 0;
 	foreach (T o; obj)
 	{

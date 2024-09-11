@@ -20,7 +20,7 @@ class StringBuilder
 		return this(to!char(b));
 	}
 
-		public StringBuilder append(ubyte b)
+	public StringBuilder append(ubyte b)
 	{
 		return this(to!char(b));
 	}
@@ -43,7 +43,7 @@ class StringBuilder
 		return this;
 	}
 
-		public StringBuilder append(uint i)
+	public StringBuilder append(uint i)
 	{
 		this.strbuffered ~= i;
 		return this;

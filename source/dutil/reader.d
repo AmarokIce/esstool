@@ -14,7 +14,13 @@ import dutil.arrayutil : count, len;
     }
 }
 
-class LineReader
+interface IReader
+{
+    public ubyte[] readRaw();
+    public string read();
+}
+
+class LineReader : IReader
 {
     private ubyte[] bufferedArray;
     private ubyte[] buffered;
