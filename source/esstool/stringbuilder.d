@@ -1,6 +1,6 @@
-module dutil.stringbuilder;
+module esstool.stringbuilder;
 
-import dutil;
+import esstool;
 import std.conv : to;
 
 class StringBuilder

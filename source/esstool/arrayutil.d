@@ -1,6 +1,6 @@
-module dutil.arrayutil;
+module esstool.arrayutil;
 
-import dutil.errors;
+import esstool.errors;
 
 T[] copy(T)(T[] origin, int start, int end)
 {

@@ -1,4 +1,4 @@
-module dutil.writer;
+module esstool.writer;
 
 interface IWriter
 {

@@ -1,4 +1,4 @@
-module dutil.ziputil;
+module esstool.ziputil;
 
 import std.zip;
 import std.file;

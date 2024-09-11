@@ -1,6 +1,6 @@
-module dutil.reader;
+module esstool.reader;
 
-import dutil.arrayutil : count, len;
+import esstool.arrayutil : count, len;
 
 @safe unittest
 {
@@ -91,7 +91,7 @@ class LineReader : IReader
     public string read()
     {
         import std.conv : to;
-        import dutil.stringbuilder;
+        import esstool.stringbuilder;
 
         StringBuilder builder = new StringBuilder();
 

@@ -1,4 +1,4 @@
-module dutil.errors;
+module esstool.errors;
 
 class RuntimeError : Error
 {
