@@ -2,13 +2,13 @@
 docs.json
 __dummy.html
 docs/
-/dutil
-dutil.so
-dutil.dylib
-dutil.dll
-dutil.a
-dutil.lib
-dutil-test-*
+/esstool
+esstool.so
+esstool.dylib
+esstool.dll
+esstool.a
+esstool.lib
+esstool-test-*
 *.exe
 *.pdb
 *.lib
@@ -17,6 +17,7 @@ dutil-test-*
 *.lst
 .vscode
 .idea
+.test
 
 # Compiled Object files
 *.o

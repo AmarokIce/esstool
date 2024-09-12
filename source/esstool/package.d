@@ -6,3 +6,4 @@ public:
     import esstool.stringbuilder;
     import esstool.ziputil;
     import esstool.reader;
+    import esstool.csvbuilder;

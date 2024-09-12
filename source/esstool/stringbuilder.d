@@ -3,7 +3,7 @@ module esstool.stringbuilder;
 import esstool;
 import std.conv : to;
 
-class StringBuilder
+public class StringBuilder
 {
 	private string strbuffered = "";
 	this()
@@ -58,6 +58,24 @@ class StringBuilder
 	public StringBuilder append(double d)
 	{
 		this.strbuffered ~= to!string(d);
+		return this;
+	}
+
+	public StringBuilder removeAt(int index)
+	{
+		this.strbuffered = this.strbuffered[0 .. index] ~ this.strbuffered[index + 1 .. $];
+		return this;
+	}
+
+	public StringBuilder removeFirst()
+	{
+		this.strbuffered = this.strbuffered[1 .. $];
+		return this;
+	}
+
+	public StringBuilder removeLast()
+	{
+		this.strbuffered = this.strbuffered[0 .. $ - 1];
 		return this;
 	}
 

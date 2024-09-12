@@ -4,7 +4,7 @@ import std.zip;
 import std.file;
 import std.string;
 
-class ZipCaches
+public class ZipCaches
 {
     ZipArchive archive = new ZipArchive();
 

@@ -34,6 +34,27 @@ void copyTo(T)(T[] origin, T[] target)
 	copyTo(origin, target, 0, len(origin));
 }
 
+T[] expandAndInsert(T)(T[] arr, T obj, int index, T empty = null)
+{
+	if (len(arr) <= index)
+	{
+		int count = index - (len(arr) - 1);
+		for(int i = 0; i < count; i++)
+		{
+			arr ~= empty;
+		}
+	}
+
+	arr[index] = obj;
+
+	return arr;
+}
+
+T[] expandAndFill(T)(T[] arr, T obj, int index)
+{
+	return expandAndInsert(arr = arr, obj = obj, index = index, empty = obj);
+}
+
 bool contains(T)(T[] array, T obj)
 {
 	foreach (T o; array)
