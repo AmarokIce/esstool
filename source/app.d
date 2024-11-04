@@ -2,7 +2,6 @@ module app;
 
 import esstool : CSVBuilder;
 
-
 void main(string[] args)
 {
     auto builder = new CSVBuilder();

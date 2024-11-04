@@ -15,8 +15,6 @@ class RuntimeError : Error
 
 class IllegalArgumentError : RuntimeError
 {
-
-    
     @nogc @safe pure nothrow this(string msg)
     {
         super(msg);

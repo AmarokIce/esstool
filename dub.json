@@ -5,6 +5,5 @@
 	"copyright": "Copyleft (ɔ) 2024, AmarokIce",
 	"description": "A minimal D application.",
 	"license": "Mozilla Public License Version 2.0",
-	"name": "esstool",
-	"version": "0.0.2"
+	"name": "esstool"
 }
